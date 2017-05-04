@@ -1,0 +1,10 @@
+  
+  
+  -------------------view1--------------------------
+  create view view1 as SELECT C.id_class,C.label_class,
+                  B.parag,B.s_parag,B.region,B.label,B.prog,B.LF,B.LFC
+				  from line_budget B,class C,ligne_groupement l
+           where l.id_ligne=B.id_line
+           and C.id_class=l.id_groupement
+		   ;
+ --------------------
